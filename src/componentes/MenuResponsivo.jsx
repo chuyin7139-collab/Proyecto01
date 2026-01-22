@@ -24,4 +24,5 @@ const MenuResponsivo = ({ open, navbarLinks }) => {
     </AnimatePresence>
   );
 };
+
 export default MenuResponsivo;

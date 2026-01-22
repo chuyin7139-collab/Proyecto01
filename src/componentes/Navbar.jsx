@@ -4,9 +4,10 @@ import { CiSearch } from "react-icons/ci";
 import { ImBooks } from "react-icons/im";
 import { MdMenu } from "react-icons/md";
 import { PiShoppingCartLight } from "react-icons/pi";
-import { div } from 'motion/react-client';
+import { motion } from "framer-motion";
 import { useState } from "react";
-import MenuResponsivo from "./MenuResponsivo";
+import MenuResponsivo from "./MenuResponsivo.jsx";
+
 
 
 const Navbar = () => {
@@ -22,8 +23,8 @@ const [abierto, setAbierto] = useState(false);
             //Sección de Logo
             <div className='text-2x1 flex ites-center gap-2 uppercase'>
                 <ImBooks />
-                <p>El sitio de  jPGV</p>
-                <p className='text-secondary'>Cursos</p>
+                <p>BIENVENIDOS A</p>
+                <p className='text-secondary'>GESTOR DE TAREAS</p>
             </div>
           }
 

@@ -1,3 +1,4 @@
+/* ===== ROOT ===== */
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,19 +6,23 @@
   text-align: center;
 }
 
+/* ===== LOGO ===== */
 .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+/* ===== LOGO ANIMATION ===== */
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -33,10 +38,84 @@
   }
 }
 
+/* ===== CARD ===== */
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+/* ========================= */
+/* ===== BANNER ===== */
+/* ========================= */
+.banner {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: bannerFade 1.5s ease-in-out;
+}
+
+.banner-title {
+  font-size: 2.5rem;
+  animation: slideDown 1.5s ease-out;
+}
+
+.banner-sub {
+  font-size: 1.2rem;
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out 0.8s forwards;
+}
+
+/* ===== BOTÓN ANIMADO (SEGUNDO ELEMENTO) ===== */
+.btn-anim {
+  background: #ff5f6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+/* ========================= */
+/* ===== ANIMACIONES ===== */
+/* ========================= */
+@keyframes bannerFade {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
