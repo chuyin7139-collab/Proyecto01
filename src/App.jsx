@@ -1,19 +1,23 @@
-import Navbar from './componentes/Navbar'
-import Banner from './componentes/Banner'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./componentes/secciones/Home.jsx";
+import Cursos from "./componentes/secciones/Cursos.jsx";
+import About from "./componentes/secciones/About.jsx";
+import Navbar from "./componentes/Navbar.jsx";
 import './App.css'
 
 const App = () => {
   return (
     <div className="overflow-x-hidden">
-      <Navbar />
-      <Banner />
-
-      {/* ===== PARTE B: SEGUNDO ELEMENTO ANIMADO ===== */}
-      <div className="main-content">
-        <button className="btn-anim">Click Aquí</button>
-      </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/cursos" element={<Cursos />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

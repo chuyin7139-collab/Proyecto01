@@ -11,7 +11,7 @@ const Banner = () => {
         transition={{ duration: 1 }}
         className="text-5xl font-bold mb-4"
       >
-    
+      <h1 className="banner-title">Bienvenido a tu app favorita</h1>
       </motion.h1>
 
       {/* Animación 2: Botón con escala */}
